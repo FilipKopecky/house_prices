@@ -2,7 +2,9 @@
 This is my solution for coding assignement in Supervised Learning course.
 
 **What was the main goal?**
-The goal of this assignement was to implement linear regression on given dataset both with and without using scikit-learn package.
+The goal of this assignement was to implement simple linear regression on given dataset both with and without using scikit-learn package.
+- Target variable: price
+- Explanatory variable: square footage of the apartments interior living space
 
 **What ware the prescribed tasks and steps to accomplish it?**
 1. Import the data “kc_house_sales.csv”
@@ -37,3 +39,15 @@ The dataset consists of house prices from King County an area in the US State of
 | long | Longitude |
 | sqft_living15 | The square footage of interior housing living space for the nearest 15 neighbors |
 | sqft_lot15 | The square footage of the land lots of the nearest 15 neighbors  |
+
+# Process and results
+Comments on process are directly in the code. Here is quick overview:
+1. Data load and simple Exploratory Data Analysis (EDA). For this purpose several "warm up" question were asked.
+2. Implement linear regression using scikit-learn library: transofrm and split data, create and fit model, extract the linear regression equation.
+3. Implement linear regression **without** using scikit-learn library: transofrm and split data, write and apply funtction for gradient_descent, write and apply function for prediction, extract the linear regression equation.
+4. Calculate evaluation metrics for both and compare, plotting both linear regression equations.
+
+Few very distant outliers were identified in during EDA. Thus, for both point 2. and 3. two versions of data were used: A) **With** outliers (OL), B) **Without** outliers (WOL) to see inspect their influence.
+
+# Disclaimer
+Visualisation map with plotly wasn't done by me. It was given by lecturer to show us location of the houses.
